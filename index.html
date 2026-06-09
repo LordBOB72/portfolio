@@ -71,8 +71,9 @@
             background: #475569;
         }
         
+        /* Glassmorphism effect for the sticky navbar */
         .glass {
-            background: rgba(15, 23, 42, 0.7);
+            background: rgba(15, 23, 42, 0.85);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -93,6 +94,21 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+        }
+
+        /* Profile Avatar Styling */
+        .profile-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(99, 102, 241, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .profile-avatar:hover {
+            border-color: rgba(99, 102, 241, 1);
+            transform: scale(1.05);
         }
 
         /* Code window styling */
@@ -177,11 +193,13 @@
         <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 2s;"></div>
     </div>
 
-    <!-- Navigation -->
+    <!-- Navigation (FIXED TO TOP OF SCREEN) -->
     <nav class="fixed top-0 w-full z-50 glass transition-all duration-300">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-white tracking-tight hover:text-primary transition-colors">
-                BB<span class="text-primary">.</span>
+            <!-- Name with Profile Photo -->
+            <a href="#" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                <img src="profile.jpg" alt="Bogolo Balapi" class="profile-avatar">
+                <span class="text-xl font-bold text-white tracking-tight">Bogolo Balapi</span>
             </a>
             
             <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
@@ -742,7 +760,7 @@
                         <div class="md:w-5/12 md:text-right md:pr-8 mb-2 md:mb-0">
                             <h3 class="text-xl font-bold text-white">Full Stack Software Developer</h3>
                             <p class="text-primary font-medium">Tsela Technologies</p>
-                            <p class="text-slate-500 text-sm mt-1">Sep 2025 - Mar 2026 · Gaborone, Botswana</p>
+                            <p class="text-slate-500 text-sm mt-1">September 2025 - March 2026 · Gaborone, Botswana</p>
                         </div>
                         
                         <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-darker group-hover:scale-125 transition-transform"></div>
@@ -821,7 +839,7 @@
                         <div class="md:w-5/12 md:pl-8 md:order-2 order-1">
                             <h3 class="text-xl font-bold text-white">IT Technical Support Officer</h3>
                             <p class="text-secondary font-medium">Epíneio Nursing Home</p>
-                            <p class="text-slate-500 text-sm mt-1">Feb 2022 - Aug 2025 · Francistown, Botswana</p>
+                            <p class="text-slate-500 text-sm mt-1">February 2022 - August 2025 · Francistown, Botswana</p>
                         </div>
                     </div>
                 </div>
